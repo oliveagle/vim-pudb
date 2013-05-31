@@ -44,7 +44,8 @@ from pudb.settings import load_breakpoints
 
 filename = vim.eval('expand("%:p")')
 
-bps = load_breakpoints(None)
+#bps = load_breakpoints(None)
+bps = load_breakpoints()
 
 for bp in bps:
     if bp[0] != filename:
@@ -63,7 +64,8 @@ python << EOF
 import vim
 from pudb.settings import load_breakpoints, save_breakpoints
 
-bps = [bp[:2] for bp in load_breakpoints(None)]
+#bps = [bp[:2] for bp in load_breakpoints(None)]
+bps = [bp[:2] for bp in load_breakpoints()]
 
 filename = vim.eval('expand("%:p")')
 row, col = vim.current.window.cursor
