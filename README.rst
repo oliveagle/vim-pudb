@@ -29,3 +29,7 @@ Know problems
 Currently, the list of breakpoints is not releaded automatically. 
 
 There is also room for speed optimisations.
+
+can toggle breakpoints in all filetypes to `crash pudb` !evil. 
+sollution is to delete broken breakpoints directly in `saved-breakpoints` under
+`$HOME/.config/pudb`
